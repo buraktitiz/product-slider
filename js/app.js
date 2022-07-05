@@ -5,8 +5,24 @@ var selectedmb = document.querySelector(".category-mob");
 var buttonSelected = document.querySelector(".slider");
 var alertLoading = document.querySelector(".alertt");
 var closeButton = document.querySelector(".close-btn");
-var closeButton = document.querySelector(".close-btn2");
 var card = document.querySelector(".card");
 var checkControl = document.querySelector(".checkIcon");
-var checkControl = document.querySelector(".checkIcon2");
-var checkControl = document.querySelector(".checkIcon3");
+
+
+
+buttonSelected.addEventListener("click", (e) => {
+    var ss = e.target.id;
+    ul.classList.add("cs-hidden");
+    if (ss === "buy-btn") {
+        alertLoading.classList.add("show");
+        alertLoading.classList.remove("hide");
+        alertLoading.classList.add("showAlert");
+        alertLoading.classList.remove("d-none");
+        alertLoading.classList.add("d-inline");
+        setTimeout(function () {
+            alertLoading.classList.remove("show");
+            alertLoading.classList.add("hide");
+            alertLoading.classList.add("d-none");
+        }, 4000);
+    }
+});
